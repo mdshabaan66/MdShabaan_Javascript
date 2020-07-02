@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>
+			Registration & Login
+		</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+			function validate(){
+				var user=document.getElementById("name");
+				var pass=document.getElementById("pwd1");
+				var mail=document.getElementById("email");
+				if(user.value.trim()==""||pass.value.trim()==""||mail.value.trim()==""){
+					alert("No Blank Space Allowed");
+					return false;
+				}
+				else{
+					return true;
+				}
+			}
+			function validate1(){
+				var user1=document.getElementById("username");
+				var pass1=document.getElementById("pwd2");
+				if(user1.value.trim()==""||pass1.value.trim()==""){
+					alert("No Blank Space Allowed");
+					return false;
+				}
+				else{
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="login-page">
+			<div class="form">
+				<form onsubmit="return validate()" action="success.html" class="register-form">
+					<input id="name" type="text" placeholder="Full Name">
+					<input id="email" type="email" placeholder="email-id">
+					<input id="pwd1" type="password" placeholder="password">
+					<button type="submit">Create</button>
+					<p class="messege">Already Registered? login here</p>
+				</form>
+				<form onsubmit="return validate1()" action="welcome.html" class="login-form">
+					<input id="username" type="text" placeholder="user name">
+					<input id="pwd2" type="password" placeholder="password">
+					<button class="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
